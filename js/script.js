@@ -18,7 +18,7 @@ modalClose.addEventListener("click", () => {
 
 //Ajax form
 $(document).ready(function() {
-  $(".form").submit(function(event) {
+  $(".modal__form").submit(function(event) {
     event.preventDefault();
 
     // Получаем данные формы
@@ -35,7 +35,7 @@ $(document).ready(function() {
       },
       error: function(xhr, status, error) {
         // В случае ошибки выводим сообщение об ошибке
-        $("#result").html("An error has occurred: " + error);
+        $("#result").html("Произошла ошибка: " + error);
       }
     });
   });
