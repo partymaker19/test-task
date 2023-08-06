@@ -1,0 +1,113 @@
+.slider {
+    background: $color-blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 219px 0 220px 0;
+
+    &__container {
+      position: relative;
+      width: 90%;
+      max-width: 785px;
+      margin: 0px 122px 0 122px;
+      overflow: hidden;
+      @include media-desctop-small {
+      max-width: 550px;
+      margin: 0px 25px 0 25px;
+    }
+    @include media-tablet {
+      max-width: 380px;
+    }
+    @include media-mobile {
+      margin: 0px 10px 0 10px;
+    }
+    }
+
+    &__wrapper {
+      display: flex;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &__slide {
+      flex: 0 0 100%;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 16px;
+      // padding: 20px;
+      text-align: center;
+    }
+
+    &__button-prev,
+    &__button-next {
+      cursor: pointer;
+}
+
+    &__button-prev {
+    left: 0;
+  }
+
+    &__button-next {
+    transform: rotate(180deg);
+    right: 0;
+  }
+
+    &__title {
+      @include font($size: 3.6rem, $weight: 600, $height: 4rem);
+      @extend %font-poppins;
+      color: $color-gold;
+      margin-top: 34px;
+      @include media-desctop-small {
+        @include font($size: 2.3rem, $weight: 600, $height: 3rem);
+      }
+      @include media-tablet {
+        @include font($size: 1.6rem, $weight: 600, $height: 2rem);
+      }
+    }
+
+    &__text {
+      @include font($size: 1.6rem, $weight: 400, $height: 4rem);
+      @extend %font-poppins;
+      color: white;
+      margin-top: 20px;
+      width: 785px;
+      @include media-desctop-small {
+      @include font($size: 1.5rem, $weight: 600, $height: 3rem);
+        width: 520px;
+      }
+      @include media-tablet {
+        width: 380px;
+        @include font($size: 1.4rem, $weight: 600, $height: 2.7rem);
+      }
+      @include media-mobile {
+        width: 240px;
+        @include font($size: 1.2rem, $weight: 600, $height: 2.5rem);
+      }
+    }
+
+    &__name {
+      @include font($size: 2.4rem, $weight: 600, $height: 4rem);
+      @extend %font-poppins;
+      color: $color-gold;
+      letter-spacing: 5.88px;
+      margin-top: 40px;
+    }
+
+    &__arrow-block {
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__arrows {
+      @include media-tablet {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+

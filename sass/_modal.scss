@@ -1,0 +1,144 @@
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  display: none;
+
+  &__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+  }
+
+  &__content-block {
+    position: relative;
+    width: 1116px;
+    height: 586px;
+    overflow: hidden;
+    margin: 0 auto;
+    background: $color-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include media-desctop-small {
+      width: 758px;
+    }
+    @include media-tablet {
+      width: 500px;
+    }
+    @include media-mobile {
+      width: 375px;
+    }
+  }
+
+  &__form {
+    width: 600px;
+    @include media-tablet {
+      width: 400px;
+    }
+    @include media-mobile {
+      width: 320px;
+    }
+  }
+
+  &__fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #495966;
+  }
+
+  &__form-input {
+    width: 520px;
+    height: 66px;
+    border-radius: 10px;
+    @include font($size: 2.4rem, $weight: 600, $height: 3.2rem);
+    @extend %font-poppins;
+    @include media-tablet {
+      width: 320px;
+    }
+    @include media-mobile {
+      width: 240px;
+    }
+  }
+
+  &__form-sub {
+    width: 320px;
+    height: 50px;
+    border-radius: 10px;
+    @include font($size: 2.4rem, $weight: 600, $height: 3.2rem);
+    @extend %font-poppins;
+    cursor: pointer;
+    border: none;
+    @include media-mobile {
+      width: 240px;
+    }
+  }
+
+  &__form-sub:hover {
+    background: $color-gold;
+    color: white;
+    transition: 0.5s;
+  }
+
+  &__form-legend {
+    @include font($size: 3rem, $weight: 600, $height: 3.2rem);
+    @extend %font-poppins;
+    color: white;
+  }
+
+  &__close {
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    left: 1028.73px;
+    top: 49.31px;
+    background-color: white;
+    clip-path: polygon(
+      20% 0%,
+      0% 20%,
+      30% 50%,
+      0% 80%,
+      20% 100%,
+      50% 70%,
+      80% 100%,
+      100% 80%,
+      70% 50%,
+      100% 20%,
+      80% 0%,
+      50% 30%
+    );
+    cursor: pointer;
+    @include media-desctop-small {
+      left: 685.73px;
+    }
+    @include media-tablet {
+      left: 428.73px;
+    }
+    @include media-mobile {
+      left: 300.73px;
+    }
+  }
+
+  &__close:hover {
+    background-color: $color-gold;
+    transition: 0.2s;
+  }
+}
+
+::placeholder {
+  @include font($size: 2.4rem, $weight: 600, $height: 3.2rem);
+  @extend %font-poppins;
+  padding: 10px 0 10px 20px;
+}
+
+.modal-active {
+  display: block;
+}
