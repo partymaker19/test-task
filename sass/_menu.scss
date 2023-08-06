@@ -1,0 +1,113 @@
+.menu {
+  display: flex;
+  gap: 129px;
+  margin-top: 80px;
+  justify-content: center;
+  @include media-desctop-small {
+      flex-direction: column;
+      align-items: center;
+    }
+
+  &__data-content {
+    margin-top: 10px;
+  }
+
+  &__first-data {
+    margin-top: 0;
+  }
+
+  &__circle-block {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+    @include media-mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__circle {
+    width: 5px;
+    height: 5px;
+    background-color: $color-gold;
+    border-radius: 50%;
+  }
+
+  &__data-bold {
+    @include font($size: 2.4rem, $weight: 600, $height: 3.2rem);
+    @extend %font-poppins;
+  }
+
+  &__data-span {
+    @include font($size: 1.8rem, $weight: 400, $height: 3.2rem);
+    @extend %font-poppins;
+  }
+
+  &__stripe {
+    width: 469px;
+    height: 1px;
+    background: $color-gray;
+    margin-top: 20px;
+    @include media-mobile {
+      width: 375px;
+    }
+  }
+
+  &__hollow-block {
+    position: relative;
+    width: 471px;
+    height: 502px;
+    border: 2px solid $color-gold;
+    @include media-desctop {
+      width: 371px;
+      height: 402px;
+    }
+    @include media-tablet {
+      width: 300px;
+    }
+  }
+
+  &__img-block {
+    margin-top: 51px;
+    padding-bottom: 175px;
+  }
+
+  &__img1 {
+    position: absolute;
+    top: 101px;
+    right: 245px;
+    @include media-desctop {
+      width: 223px;
+      height: 386px;
+    }
+    @include media-tablet {
+      width: 180px;
+      height: 300px;
+      top: 165px;
+      right: 165px;
+    }
+    @include media-mobile {
+      right: 155px;
+    }
+  }
+
+  &__img2 {
+    position: absolute;
+    bottom: 67px;
+    left: 248px;
+    @include media-desctop {
+      width: 223px;
+      height: 386px;
+    }
+    @include media-tablet {
+      width: 180px;
+      height: 300px;
+      bottom: 165px;
+      left: 165px;
+    }
+    @include media-mobile {
+      left: 155px;
+    }
+  }
+  
+}
